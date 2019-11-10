@@ -102,7 +102,7 @@
      */
     updateCounter() {
       let maxLength = +this.$el.attr('data-length'),
-        actualLength = splitter.splitGraphemes(...this.el.value).length;
+        actualLength = splitter.splitGraphemes(this.el.value).length;
       this.isValidLength = actualLength <= maxLength;
       let counterString = actualLength;
 

@@ -10396,7 +10396,7 @@ $jscomp.polyfill = function (e, r, p, m) {
       value: function updateCounter() {
         var splitter = new GraphemeSplitter();
         var maxLength = +this.$el.attr('data-length'),
-            actualLength = splitter.splitGraphemes(...this.el.value).length;
+            actualLength = splitter.splitGraphemes(this.el.value).length;
         this.isValidLength = actualLength <= maxLength;
         var counterString = actualLength;
 
