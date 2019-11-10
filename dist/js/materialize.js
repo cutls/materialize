@@ -10395,7 +10395,7 @@ $jscomp.polyfill = function (e, r, p, m) {
       key: "updateCounter",
       value: function updateCounter() {
         var maxLength = +this.$el.attr('data-length'),
-            actualLength = this.el.value.length;
+            actualLength = [...this.el.value].length;
         this.isValidLength = actualLength <= maxLength;
         var counterString = actualLength;
 

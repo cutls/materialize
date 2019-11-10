@@ -101,7 +101,7 @@
      */
     updateCounter() {
       let maxLength = +this.$el.attr('data-length'),
-        actualLength = this.el.value.length;
+        actualLength = [...this.el.value].length;
       this.isValidLength = actualLength <= maxLength;
       let counterString = actualLength;
 
