@@ -1,5 +1,6 @@
 (function($) {
   'use strict';
+  const splitter = new GraphemeSplitter();
 
   let _defaults = {};
 
@@ -101,7 +102,7 @@
      */
     updateCounter() {
       let maxLength = +this.$el.attr('data-length'),
-        actualLength = [...this.el.value].length;
+        actualLength = splitter.splitGraphemes(...this.el.value).length;
       this.isValidLength = actualLength <= maxLength;
       let counterString = actualLength;
 
