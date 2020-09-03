@@ -393,7 +393,7 @@
       let idealHeight = dropdownBRect.height;
       let idealWidth = dropdownBRect.width;
       let idealXPos = triggerBRect.left - dropdownBRect.left;
-      let idealYPos = triggerBRect.top - dropdownBRect.top;
+      let idealYPos = triggerBRect.top - dropdownBRect.top + dropdownBRect.height;
 
       let dropdownBounds = {
         left: idealXPos,
